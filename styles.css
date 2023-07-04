@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Narnoor&family=Nunito+Sans:wght@400;700&display=swap');
+
+:root {
+    --background: white;
+    --primary: #000000;
+    --secondary: #CDB427;
+    --btn_bg: #B49A24;
+    --bg-gris: #747474;
+    --bg-blood: #ff0000;
+
+    /*Textos*/
+    --text-gray: #cbced1;
+    --text-white: #f3f4f6;
+
+    /*Decoration*/
+    --fire: #ff6d00;
+    --electric: #64d3ff;
+}
+
+*{
+    font-family: 'Narnoor', serif;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+header{
+    background: var(--bg-gris);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    padding: 0px 30px 0px 30px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.logo{
+    height: 80%;
+    width: auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.logo:hover{
+    transform:scale(1.2)
+}
+
+.navbar,
+.navbar-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    gap: 350px;
+}
+
+.navbar-list{
+    gap: 30px;
+}
+
+.navbar-list li a{
+    color: var(--text-gray);
+    align-items: center;
+}
+
+.navbar-list li:first-child > a {
+    color: var(--text-white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.navbar-list li:first-child :hover{
+    transform:scale(1.2)
+}
+
+.material-symbols-outlined{
+    color: var(--background);
+    font-weight: 600;
+    height: 30px;
+    width: 100%;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.material-symbols-outlined:hover{
+    transform:scale(1.2)
+}
+
+main{
+    background: var(--text-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+#hero{
+    display: flex;
+    margin-top: 65px;
+    padding: 70px 0;
+    align-items: center;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.hero-info h1{
+    font-size: 48px;
+    width: 80%;
+    min-width: 500%;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+}
+
+.hero-info p{
+    font-size: 15px;
+    width: 70%;
+    color: rgb(37, 37, 37);
+}
+
+.hero-info p > span{
+    font-weight: 900;
+}
+
+.hero-info a {
+    color: rgb(255, 255, 255);
+    background-color: rgb(2, 129, 2);
+    width: 120px;
+    padding: 8px 0px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hero-card {
+    width: 300px;
+    background-color: white ;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 15px;
+}
+
+.hero-card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-card-top{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+}
+
+.diez{
+   background-color: gold;
+    text-align: center;
+    width: 50px;
+    scroll-padding-top: 3px 0px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.hero-card-bottom{
+display: flex;
+justify-content: space-between;
+}
+
+.hero-card-creator{
+    display: flex;
+    text-align: center;
+    gap: 40px;
+}
+
+
+.hero-card-creator img{
+    height: 40px;
+    width: 40px;
+}
+
+.hero-card-price p{
+    color: #747474;
+    font-size: 12px;
+    font-weight: 300px;
+}
+
+.hero-card-price span{
+    color: rgb(0, 173, 0);
+    font-size: 12px;
+    font-weight: 300px
+}
+
+#info{
+    padding: 70 0px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+#info h2{
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.info-cards-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.info-card{
+    width: 300px;
+    height: 290px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.info-card img {
+    width: 50px;
+
+}
+
+.info-card p{
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(82, 82, 82);
+}
