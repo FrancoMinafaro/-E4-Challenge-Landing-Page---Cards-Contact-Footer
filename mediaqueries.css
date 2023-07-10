@@ -1,0 +1,118 @@
+@media (max-width: 992px) {
+
+    .navbar{
+        gap: 10px;
+    }
+    .navbar-list{
+        position: absolute;
+        top: 65px;
+        left: 5%;
+        right: 5%;
+        flex-direction: column;
+        background-color: var(--text-gray);
+        border: 2px solid rgb(87, 218, 0);
+        border-top: none;
+        border-radius: 0px 0px 15px 15px;
+        align-items: flex-start;
+        gap: 25px;
+        padding: 45px 30px;
+        z-index: 2;
+        display: none
+        
+    }
+
+    .navbar-list a {
+        font-size: 18px
+    }
+
+    .cart-icon{
+        height: 35px;
+        margin-right: 0px;
+        margin-top: 8px;
+    }
+
+    .menu-label{
+        display: flex;
+        cursor: pointer;
+        order: 2;
+    }
+
+    .menu-label img{
+        height: 35px;
+        width: 70px;
+    }
+
+    #menu-toggle:checked + .navbar-list{
+        display: flex;
+    }
+
+    .hero-info{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .hero-info h1{
+        width: 90%;
+        max-width: 500px;
+        min-width: unset;
+    }
+
+    .hero-info p {
+        width: 60%;
+        max-width: 600px;
+    }
+
+    .hero-card{
+        display: none;
+    }
+
+    #info h2{
+        text-align: center;
+        width: 80%;
+
+    }
+
+    .info-cards-container{
+        max-width: 80%;
+    }
+
+    @media (max-width: 576px){
+        
+        .cart{
+            left: 0;
+            width: 100%;
+            border: none;
+        }
+
+        .cart-item{
+            flex-wrap: wrap;
+        }
+        .hero-info p{
+            width: 70%;
+            max-width: unset;
+        }
+    }
+
+    .info-card{
+        width: 100%;
+        height: 350px;
+        justify-content: center;
+
+    }
+
+    .info-card p{
+        width: 90%;
+    }
+
+    .cointainer-redes{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    
+
+
+}

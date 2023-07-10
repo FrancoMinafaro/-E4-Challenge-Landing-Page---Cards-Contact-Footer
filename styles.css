@@ -29,7 +29,7 @@
 
 
 header{
-    background: var(--bg-gris);
+    background: linear-gradient(to top,var(--bg-gris), rgb(54, 54, 54) );
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -52,12 +52,179 @@ header{
     transform:scale(1.2)
 }
 
+.cart{
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: linear-gradient(to top, rgb(54, 54, 54), var(--bg-gris));
+    height: calc(100vh - 65px);
+    border-left: 1px solid var(--background);
+    padding: 50px 30px;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: auto ;
+    display: none;
+}
+
+.cart::-webkit-scrollbar{
+    display: none;
+}
+
+.cart h2{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid green;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #747474;
+    padding: 20px;
+    border: 1px solid green ;
+    border-radius: 10px;
+
+}
+
+.cart-item img{
+    height: 65px;
+    
+}
+
+.item-info{
+    display: flex;
+    flex-direction: column;   
+}
+
+.item-title{
+    color: var(--text-gray);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.item-bid{
+    color: var(--text-gray);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.item-price{
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 800;
+    background: linear-gradient(to top, rgb(1, 179, 30), rgb(25, 214, 0));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.item-handler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quantity-handler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: var(--text-white);
+    font-weight: 400;
+    border: 1px solid green
+    
+}
+
+/* .up{
+    border: 1px solid green;
+} */
+.down{
+    background-color: rgb(77, 76, 76);
+}
+
+.item-quantity{
+    color: var(--text-white);
+}
+
+.divider{
+    margin-top: 20px;
+    border: 1px solid rgb(1, 122, 1);
+}
+
+
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cart-total p{
+    color: var(--text-white);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.cart-total span{
+    color: goldenrod;
+    font-weight: 400;
+    font-size: 18px;
+    
+}
+
+
+.btn-add{
+    color: var(--text-white);
+    background: #39b906;
+    margin-top: 10px;
+    border: 1px solid rgb(1, 122, 1);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+.btn-add:hover{
+    transform:scale(1.2)
+}
+
+
+#cart-toggle:checked + .cart{
+    display: flex;
+}
+
+#menu-toggle,
+#cart-toggle,
+.menu-label{
+   display: none;
+}
+
+/* .menu-label{
+    display: flex;
+} */
+
+
 .navbar,
 .navbar-list{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+/* .navbar-list{
+    display: none;
+} */
 
 .navbar{
     gap: 350px;
@@ -68,7 +235,7 @@ header{
 }
 
 .navbar-list li a{
-    color: var(--text-gray);
+    color: var(--text-white);
     align-items: center;
 }
 
@@ -128,7 +295,11 @@ main{
     width: 80%;
     min-width: 500%;
     font-weight: 800;
-    color: rgb(0, 0, 0);
+    background: linear-gradient(to top, rgb(12, 211, 45), rgb(15, 122, 1));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+
 }
 
 .hero-info p{
@@ -145,10 +316,12 @@ main{
     color: rgb(255, 255, 255);
     background-color: rgb(2, 129, 2);
     width: 120px;
-    padding: 8px 0px;
+    padding: 12px 12px 12px 12px;
     border-radius: 10px;
     text-align: center;
+    
 }
+
 
 .hero-card {
     width: 300px;
@@ -212,8 +385,27 @@ justify-content: space-between;
     font-weight: 300px
 }
 
+
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    max-width: 1200px;
+    justify-content: center;
+    gap: 50px;
+    
+}
+
+.word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #info{
-    padding: 70 0px;
+    padding: 70px 50px  50px;
     max-width: 1200px;
     display: flex;
     justify-content: center;
@@ -258,3 +450,88 @@ justify-content: space-between;
     font-weight: 300;
     color: rgb(82, 82, 82);
 }
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+ul{
+    list-style: none;
+}
+
+.pie-pagina{
+    background-color:var(--bg-gris);
+    padding: 30px 40px 30px 40px  ;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px ;
+    color: var(--text-white);
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #39b906 ;
+    padding-bottom: 10px;
+    display: inline-block;
+
+}
+
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: var(--text-white);
+    padding-left: 10px;
+}
+
+.container-redes{
+    display: flex;
+    
+    
+}
+.container-redes-img{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 7px;
+    
+}
+
+
+
+
+
